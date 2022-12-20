@@ -1,10 +1,3 @@
-/*
-
-TemplateMo 575 Leadership Event
-
-https://templatemo.com/tm-575-leadership-event
-
-*/
 
 
 /*---------------------------------------
@@ -19,7 +12,9 @@ https://templatemo.com/tm-575-leadership-event
     --navbar-bg-color:              #273053; */
     --primary-color:                #0df091;
     --secondary-color:              #0dfd95;
-    --section-bg-color:             #f0f8ff;
+    /* --about-color:                  #356852e3; */
+    --about-color:                  #275337;
+    --section-bg-color:             #60c797;
     --dark-color:                   #000000;
     --navbar-bg-color:              #275337;
 
@@ -307,7 +302,7 @@ https://templatemo.com/tm-575-leadership-event
     font-size: 20px;
     line-height: 1.2rem;
     font-weight: var(--font-weight-bold);
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     text-transform: uppercase;
   }
   
@@ -1156,3 +1151,19 @@ a .symbol{
       text-align: center;
     }
   }
+
+/*-------------------------
+About US
+---------------------------*/
+
+.banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(70vh - 84px);
+    background: var(--about-color);
+    opacity: 0.8;
+}
