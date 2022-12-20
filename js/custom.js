@@ -30,6 +30,7 @@
     
   })(window.jQuery);
 
+// page navbar
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
@@ -40,7 +41,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos && currentScrollPos > 100) {
     console.log(currentScrollPos);
     document.getElementById("navbar").style.top = "0";
-    document.getElementById("navbar").style.background ="#273053";
+    document.getElementById("navbar").style.background ="#275337";
   } else {
     if(currentScrollPos > 100){
       console.log(currentScrollPos);
@@ -122,3 +123,14 @@ $('.owl-carousel').owlCarousel({
       }
   }
 })
+
+// navbar
+function show(){
+  document.getElementById("nav_content").className = "";
+  document.getElementById("nav_content").className = "nav_content_show";
+}
+
+function notshow(){
+  document.getElementById("nav_content").className = "";
+  document.getElementById("nav_content").className = "nav_content";
+}
