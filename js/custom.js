@@ -41,7 +41,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos && currentScrollPos > 100) {
     console.log(currentScrollPos);
     document.getElementById("navbar").style.top = "0";
-    document.getElementById("navbar").style.background ="#275337";
+    document.getElementById("navbar").style.background ="#273053";
   } else {
     if(currentScrollPos > 100){
       console.log(currentScrollPos);
@@ -84,18 +84,18 @@ $('#myCarousel').on('slide.bs.carousel', function(e) {
   $('[id=carousel-selector-'+id+']').addClass('selected');
 });
 // when user swipes, go next or previous
-$('#myCarousel').swipe({
-  fallbackToMouseEvents: true,
-  swipeLeft: function(e) {
-    $('#myCarousel').carousel('next');
-  },
-  swipeRight: function(e) {
-    $('#myCarousel').carousel('prev');
-  },
-  allowPageScroll: 'vertical',
-  preventDefaultEvents: false,
-  threshold: 75
-});
+// $('#myCarousel').swipe({
+//   fallbackToMouseEvents: true,
+//   swipeLeft: function(e) {
+//     $('#myCarousel').carousel('next');
+//   },
+//   swipeRight: function(e) {
+//     $('#myCarousel').carousel('prev');
+//   },
+//   allowPageScroll: 'vertical',
+//   preventDefaultEvents: false,
+//   threshold: 75
+// });
 
 $('#myCarousel .carousel-item img').on('click', function(e) {
   var src = $(e.target).attr('data-remote');
@@ -105,24 +105,35 @@ $('#myCarousel .carousel-item img').on('click', function(e) {
 
 //testimonial
 
-
-
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  nav:true,
-  responsive:{
-      0:{
-          items:1
-      },
-      600:{
-          items:3
-      },
-      1000:{
-          items:5
-      }
-  }
-})
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop:true,
+    nav:true,
+    autoWidth:true,
+    margin:10,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },            
+        960:{
+            items:5
+        },
+        1200:{
+            items:6
+        }
+    }
+});
+owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY>0) {
+        owl.trigger('next.owl');
+    } else {
+        owl.trigger('prev.owl');
+    }
+    e.preventDefault();
+});
 
 // navbar
 function show(){

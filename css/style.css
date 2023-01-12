@@ -5,18 +5,19 @@
 -----------------------------------------*/
 :root {
     --white-color:                  #ffffff;
-    /* --primary-color:                #0dcaf0;
+     --primary-color:                #0dcaf0;
     --secondary-color:              #0d6efd;
     --section-bg-color:             #f0f8ff;
     --dark-color:                   #000000;
-    --navbar-bg-color:              #273053; */
-    --primary-color:                #0df091;
-    --secondary-color:              #0dfd95;
+    --navbar-bg-color:              #273053; 
+    --black-color:                    #241c15;
+    /* --primary-color:                #0df091;
+    --secondary-color:              #0dfd95; */
     /* --about-color:                  #356852e3; */
-    --about-color:                  #275337;
-    --section-bg-color:             #60c797;
+    --about-color:                  #273053;
+    /* --section-bg-color:             #60c797; */
     --dark-color:                   #000000;
-    --navbar-bg-color:              #275337;
+    /* --navbar-bg-color:              #275337; */
 
     --p-color:                      #717275;
     --highlight-icon-color:         #ff0100;
@@ -286,7 +287,7 @@
     NAVIGATION              
   -----------------------------------------*/
   .sticky-wrapper {
-    background: var(--navbar-bg-color);
+    /* background: var(--navbar-bg-color); */
   }
   
   .navbar {
@@ -549,8 +550,8 @@ a .symbol{
   
   .hero::after {
     content: "";
-    /* background: rgba(0, 0, 0, 0) linear-gradient(rgba(39, 83, 59, 0.1) 0%, rgb(39, 48, 83) 100%) repeat scroll 0% 0%; */
-    background: rgba(0, 0, 0, 0) linear-gradient(rgba(39, 83, 59, 0.1) 0%, rgb(39, 83, 51) 100%) repeat scroll 0% 0%;
+     background: rgba(0, 0, 0, 0) linear-gradient(rgba(39, 83, 59, 0.1) 0%, rgb(39, 48, 83) 100%) repeat scroll 0% 0%; 
+    /* background: rgba(0, 0, 0, 0) linear-gradient(rgba(39, 83, 59, 0.1) 0%, rgb(39, 83, 51) 100%) repeat scroll 0% 0%; */
     position: absolute;
     top: 0;
     right: 0;
@@ -1108,44 +1109,58 @@ a .symbol{
 
   .slider {
     width: 100%;
+    
+  }
+
+  .slider .custom-btn{
+    z-index: 2;
+    padding-top: 2%;
+  }
+
+  .slider .carousel-item{
+    height: 430px;
   }
 
   .slider {
     position: absolute;
     z-index: 2;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  .slider p{
-    color: var(--white-color);
-    width: 386px;
+
+  .slider .carousel_content{
+    width: 400px;
     margin-left: 18%;
   }
+
+  .slider p{
+    color: var(--white-color);
+    font-size: var(--p-font-size);
+    padding-top: 5%;
+  }
+
+  .slider h2{
+    color: var(--primary-color);
+    font-size: var(--h2-font-size);
+  }
+
 
   .hero-text .custom-btn{
     color: var(--white-color);
   }
 
   @media screen and (max-width: 991px) {
-    .hero-text {
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    }
+    
     .slider {
       position: absolute;
       z-index: 2;
-      top: 75%;
+      top: 50%;
       transform: translate(-50%, -50%);
     }
   
-    .slider p{
-      color: var(--white-color);
+    .slider .carousel_content{
       width: 100%;
       margin-left: 0px;
       text-align: center;
@@ -1165,5 +1180,179 @@ About US
     right: 0;
     height: calc(70vh - 84px);
     background: var(--about-color);
-    opacity: 0.8;
+    
+    z-index: -1;
+}
+
+.banner{
+  height: 600px;
+}
+
+.banner img{
+  max-width: 100%;
+  height: auto;
+  width: 80%
+}
+
+.picture{
+  position: absolute;
+  transform: translate(60%, 20%);
+}
+
+.text-about{
+
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.text-about h3{
+  color: var(--white-color);
+}
+
+.content{
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  display: block;
+  padding: 10px;
+}
+
+.content .about-text{
+ 
+  margin-bottom: 15%;
+}
+
+.content p{
+  color: #241c15;
+}
+
+.content p span{
+  font-weight: bold;
+}
+
+.content img{
+width: 100%;
+height: auto;
+margin: auto;
+}
+
+.content .who-we-are{
+  margin-bottom: 15%;
+  
+}
+
+.content .patnerships{
+  margin-bottom: 15%;
+}
+
+.content .offerings{
+  margin-bottom: 15%;
+}
+
+
+
+/*-------------------
+SERVICES
+---------------------*/
+
+.banner-services{
+  background: rgba(0, 0, 0, 0) linear-gradient(rgba(39, 83, 59, 0.1) 0%, rgb(39, 48, 83) 100%) repeat scroll 0% 0%; 
+  height: 510px;
+  margin-bottom: 10%;
+}
+
+.banner-services img{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  display: block;
+  width: 0;
+  height: 80%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.banner-services .text-about h3{
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: var(--h1-font-size);
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.detail-service{
+  position: relative;
+  text-align: center;
+  color: #241c15;
+  font-size:var(--h4-font-size);
+  padding: 5%;
+}
+
+.section-service{
+  padding: 5%;
+  margin: 4%;
+}
+
+.section-service-content {
+  padding: 7%;
+}
+
+.section-service h4{
+  font-size: var(--h4-font-size);
+  color: var(--primary-color);
+}
+
+.section-service h2{
+  font-size: var(--h2-font-size);
+  color: var(--primary-color);
+}
+
+.section-service p{
+  font-size: var(--p-font-size);
+  color: var(--black-color);
+}
+
+.section-service .carousel .card{
+  position: relative;
+  width: 260px;
+  height: 400px;
+  margin-left: 10%;
+  padding: 10%;
+}
+
+.skills_bg{
+  background: var(--section-bg-color);
+}
+
+.section-service .carousel .card li{
+  font-size: var(--p-font-size);
+  color: var(--black-color);
+  margin: auto;
+}
+
+
+
+
+
+@media screen and (max-width: 991px) {
+  .banner img{
+    width: 100%;
+  }
+  .picture{
+    top: 20%;
+    transform: translate(0%, 50%);
+    width: 100%;
+  }
 }
