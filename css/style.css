@@ -287,7 +287,8 @@
     NAVIGATION              
   -----------------------------------------*/
   .sticky-wrapper {
-    /* background: var(--navbar-bg-color); */
+     background: var(--navbar-bg-color); 
+     opacity: 0.6;
   }
   
   .navbar {
