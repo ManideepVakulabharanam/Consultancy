@@ -214,13 +214,14 @@
     <script type="text/javascript">
         function sendEmail() {
             Email.send({
-                Host: "smtp.gmail.com",
-                Username: "deepmani434@gmail.com",
-                Password: "bkuyexhduvwkpdxe",
-                To: 'deepmani434@gmail.com',
-                From: "vakulabharanammanideep@gmail.com",
-                Subject: "Sending Email using javascript",
-                Body: "Well that was easy!!",
+                Host: "smtp.elasticemail.com",
+                Username: "mani.vakula@gmail.com",
+                //pass F747BBFE7A993CFF701AD8D0948FB42EDF4A
+                Password: "F747BBFE7A993CFF701AD8D0948FB42EDF4A",
+                To: 'Goutham.mada@gmail.com',
+                From: "mani.vakula@gmail.com",
+                Subject: "Sending Email from manideep",
+                Body: "WelCome to Dynato World",
             })
                 .then(function (message) {
                     alert(message)
