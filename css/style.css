@@ -287,8 +287,8 @@
     NAVIGATION              
   -----------------------------------------*/
   .sticky-wrapper {
-     background: var(--navbar-bg-color); 
-     opacity: 0.6;
+     /* background: var(--navbar-bg-color);  */
+     /* opacity: 0.6; */
   }
   
   .navbar {
@@ -1190,14 +1190,14 @@ About US
 }
 
 .banner img{
-  max-width: 100%;
+  /* max-width: 100%;
   height: auto;
-  width: 80%
+  width: 80% */
 }
 
 .picture{
   position: absolute;
-  transform: translate(60%, 20%);
+  transform: translate(80%,20%);
 }
 
 .text-about{
