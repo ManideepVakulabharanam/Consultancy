@@ -1333,9 +1333,61 @@ SERVICES
   padding: 10%;
 }
 
+.section-service .carousel-gov .card{
+  position: relative;
+  width: 550px;
+  height: 500px;
+  margin-left: 10%;
+  padding: 10%;
+}
+
+.section-service .row{
+  padding: 1%;
+}
+
+.section-service .row .card{
+  height: 380px;
+  text-align: center;
+  padding: 2%;
+}
+
+.section-service .carousel-autodev .card{
+  position: relative;
+  width: 450px;
+  height: 250px;
+  margin-left: 10%;
+  padding: 10%;
+}
+
+.section-service .carousel-autodev .card h5{
+  color: var(--secondary-color);
+}
+
+ .card-bg .card{
+  background: var(--section-bg-color)
+}
+
+.section-service .row .card-body h5{
+  color: var(--primary-color);
+}
+
+.section-service .row .card h5{
+  color: var(--primary-color);
+}
+
+.section-service .carousel-gov .card h5{
+  color: var(--primary-color);
+}
+
+.section-service .carousel-gov .card p{
+  color: var(--dark-color);
+}
+
+
 .skills_bg{
   background: var(--section-bg-color);
 }
+
 
 .section-service .carousel .card li{
   font-size: var(--p-font-size);
