@@ -1351,6 +1351,11 @@ SERVICES
   padding: 2%;
 }
 
+.product_data .row .card{
+  height: 100px;
+  background: var(--section-bg-color);
+}
+
 .section-service .carousel-autodev .card{
   position: relative;
   width: 450px;
