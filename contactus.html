@@ -109,7 +109,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="#section_7">Contact</a>
+                        <a class="nav-link click-scroll" href="contactus.html">Contact</a>
                     </li>
 
 
@@ -129,22 +129,53 @@
     </div>
 
     <main class="tech-main">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+
+        <section>
+        <div class="conatiner section-service">
+         <div class="row">
+            <div class="col-lg-7">
+                <img src="images/image_contact.jpg" alt=""  width="100%">
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
+            <div class="col-lg-5">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <div class="input-group">
+                        <input type="text" id="FirstName" aria-label="First name" placeholder="First Name" class="form-control" required>
+                        <input type="text" id="LastName" aria-label="Last name" placeholder="Last Name" class="form-control" required>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Email1" class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Email" aria-describedby="emailHelp" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <input type="tel"  class="form-control" id="mobile" placeholder="Mobile Number" pattern="[6-9]{1}[0-9]{9}" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Textarea" class="form-label">Comments</label>
+                    <textarea class="form-control" id="Textarea" rows="1"></textarea>
+                  </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <section >
+        <div class="container detail-service">
+          <div class="row">
+              <div class="col-lg-12">
+                  For any queries please contact at <a style="color:blue;" href='mailto:info@dynatocs.com'>info@dynatocs.com </a> 
+              </div>
+          </div>
+        </div>
+  </section>
+
+      
     </main>
 
 
@@ -200,7 +231,7 @@
         </div>
     </footer>
 
-
+    
     
 
     <script src="js/jquery.min.js"></script>
@@ -212,20 +243,38 @@
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script type="text/javascript">
+
+      
+
         function sendEmail() {
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "mani.vakula@gmail.com",
-                //pass F747BBFE7A993CFF701AD8D0948FB42EDF4A
-                Password: "F747BBFE7A993CFF701AD8D0948FB42EDF4A",
-                To: 'Goutham.mada@gmail.com',
-                From: "mani.vakula@gmail.com",
-                Subject: "Sending Email from manideep",
-                Body: "WelCome to Dynato World",
-            })
-                .then(function (message) {
-                    alert(message)
-                });
+       var FirstName = document.getElementById("FirstName").value;
+       var LastName = document.getElementById("LastName").value;
+       var email = document.getElementById("email").value;
+       var mobile = document.getElementById("mobile").value;
+       var Textarea = document.getElementById("Textarea").value;
+       let msg_body = `
+       <b>Name:</b> ${FirstName}&nbsp;${LastName}
+    <br>
+    <b>Email:</b> ${email}
+    <br>
+    <b>Contact:</b> ${mobile}
+    <br>
+    <b>Comments:</b> ${Textarea}
+       `;
+      
+             Email.send({
+                SecureToken : "77c487bb-bbd0-46f2-9dcc-ff3a5a89b2fe",
+                 Host: "smtp.elasticemail.com",
+                 Username: "dynatoconsultancysender@gmail.com",
+                Password: "1CEC0F7C1AA9608CB4FB9B3DB1481839D9F2",
+                 To: "info@dynatocs.com",
+                 From: "dynatoconsultancysender@gmail.com",
+                 Subject: "Email from "+ FirstName,
+                 Body: msg_body,
+             })
+                 .then(function (message) {
+                     alert(message)
+                 });
         }
     </script>
     <script>
