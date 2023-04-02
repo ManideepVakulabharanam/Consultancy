@@ -820,13 +820,17 @@ a .symbol{
  /* Testimonial CSS Code Start */
  .testimonial{
     /* background-color: #2e3553; */
-    background-color: #2e5332;
+    background-color: #2e3353;
     border-radius: 10%;
     padding: 5%;
     opacity: 0.8;
     color: var(--white-color);
     z-index: 100;
  }
+
+.test-det h5,p{
+  color: var(--white-color);
+}
 
  .text-muted{
     color: var(--white-color);
